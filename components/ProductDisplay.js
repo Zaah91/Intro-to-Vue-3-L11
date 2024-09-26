@@ -29,13 +29,15 @@ app.component('product-display', {
           @mouseover="updateVariant(index)" 
           class="color-circle" 
           :style="{ backgroundColor: variant.color }">
+          <!--:style is a style binding-->
         </div>
         
         <button 
           class="button" 
-          :class="{ disabledButton: !inStock }" 
+          :class="{ disabledButton: !inStock }"
           :disabled="!inStock" 
           v-on:click="addToCart">
+          <!--:class is a class binding-->
           Add to Cart
         </button>
       </div>
